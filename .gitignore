@@ -7,3 +7,5 @@ mp.bin
 # Local run output
 *.log
 test_out.txt
+# Local event database (pi/ingest.py)
+*.db

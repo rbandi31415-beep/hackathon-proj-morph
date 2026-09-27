@@ -8,6 +8,8 @@ Buttons, joystick and rotary encoder on an ESP32 (MicroPython) or Arduino Nano, 
 - `status.html`, `status_esp32.html` — live status pages (Web Serial, Chrome).
 - `arcade.html` — arcade game playable with the controller (keyboard fallback).
 - `controller.py` — drives the Mac: `slides` (default), `volume`, or `music` (media keys: next/prev track, play/pause, mute, encoder volume).
+- `pi/` — runs on a Raspberry Pi with the Nano plugged in; forwards its input stream over the LAN. See `pi/README.md`.
+- `server/` — runs on your machine; receives that stream and logs it to a local SQLite database, so a Claude Code agent here can query input history. See `server/README.md`.
 
 ```sh
 python3 -m venv .venv && .venv/bin/pip install pyserial esptool mpremote
